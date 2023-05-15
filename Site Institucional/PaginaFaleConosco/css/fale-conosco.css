@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: Arial;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #242424;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #B9B9B9;
+}
+
+.navbar li{
+    display: inline-flex;
+    list-style: none;
+    margin-left: 1.5%;
+}
+
+.navbar{
+    display: flex;
+    height: 100%;
+    width: 80%;
+    color: #B9B9B9;
+    align-items: center;
+    text-align: center;
+
+}
+
+#falehover a{
+    font-weight: bold;
+    color: #C36B1A;
+}
+
+#textonavbar{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* CONTEÚDO */
+.conteudo {
+    display: flex;
+    background-image: url(../../ImagensGerais/MapaInferno.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    flex-direction: center;
+}
+
+#AgenteTR {
+    margin-bottom: 100px;
+    height: 100%;
+}
+
+.DivAjuda {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.692);
+    backdrop-filter: blur(5px);
+    justify-content: space-around;
+    width: 50%;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.DivAjuda span{
+
+}
+
+.DivAjuda #input_nome{
+    margin: 3%;
+    border-radius: 5px;
+    border: 1px solid black
+}
+
+.DivAjuda #input_email{
+    margin: 3%;
+    border-radius: 5px;
+    border: 1px solid black
+}
+
+.DivAjuda #input_mensagemDuvida {
+    height: 30%;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 3%;
+}
+
+.DivAjuda button {
+    border-radius: 10px;
+    height: 10%;
+    margin: 3%;
+}
+
+
+
+
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    background-color: #242424;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.containerFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#DireitosReservados {
+    display: flex;
+    color: #B9B9B9;
+}
