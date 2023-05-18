@@ -1,0 +1,101 @@
+.menuflutuante {
+    display: none;
+    z-index: 2;
+    position: absolute;
+    width: 22%;
+    height: 34%;
+    left: 68%;
+    top: 6%
+}
+
+.blocomenuflu {
+    display: flex;
+    position: absolute;
+    background-color: #303030;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.conta {
+    display: flex;
+    position: absolute;
+    font-weight: 300;
+    font-size: 100%;
+    line-height: 18px;
+    color: #C6B082;
+    top: 10%;
+    left: 6.5%;
+}
+
+.imagemperfil{
+    display: flex;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    top: 22.5%;
+    left: 8.6%;
+    background-color: ghostwhite;
+}
+
+.nomeconta {
+    display: flex;
+    position: absolute;
+    font-weight: 300;
+    font-size: 100%;
+    line-height: 18px;
+    color: #C6B082;
+    top: 23%;
+    left: 24%;
+}
+
+.contaemail {
+    display: flex;
+    position: absolute;
+    font-weight: 300;
+    font-size: 90%;
+    line-height: 18px;
+    top: 30.5%;
+    left: 24%;
+    color: #FFAD00;
+}
+.gerenciarconta{
+    position: absolute;
+    font-weight: 300;
+    font-size: 100%;
+    line-height: 18px;
+    color: #C6B082;
+    top: 61%;
+    left: 6.5%;
+    cursor: pointer;
+}
+.contadashboard{
+    display: flex;
+    position: absolute;
+    font-weight: 300;
+    font-size: 100%;
+    color: #C6B082;
+    top: 72%;
+    left: 6.5%;
+    cursor: pointer;
+}
+.contalinha{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 0.5%;
+    top: 83%;
+    transform: rotate(180deg);
+    background-color: rgba(255, 174, 0, 0.5);
+}
+
+.contalogout{
+    display: flex;
+    position: absolute;
+    font-weight: 300;
+    font-size: 100%;
+    color: #C6B082;
+    top: 88%;
+    left: 6.5%;
+    cursor: pointer;
+}

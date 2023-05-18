@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../PaginaSobre/css/sobre.css">
+    <link rel="stylesheet" href="../cssglobal/stylemenuflutuante.css">
     <title>Fale Conosco | Counter Net</title>
 </head>
 
@@ -14,16 +15,29 @@
     <div class="header">
         <div class="navbar">
             <div id="textonavbar">
+                <!-- <img class="Logo" src="../ImagensGerais/Logo CSGO.png"  alt=""> -->
                 <li id="homehover"><a href="">HOME</a></li>
-                <li id="sobrehover"><a href="">SOBRE</a></li>
+                <li id="sobrehover"><a href="../PaginaSobre/sobre.html">SOBRE</a></li>
                 <li id="ajudahover"><a href="">AJUDA</a></li>
-                <li id="falehover"><a  href="../PaginaFaleConosco/fale-conosco.html">FALE CONOSCO</a></li>
-                <li id="pipehover"><a>|</a></li>
-                <li id="loginhover"><a href="">LOGIN</a></li>
-                <li id="cadastrohover"><a href="">CADASTRE-SE</a></li>
+                <li id="falehover"><a href="../PaginaFaleConosco/fale-conosco.html">FALE CONOSCO</a></li>
+                <li>|</li>
+                <li id="iconmenuperfil" class="material-symbols-outlined" onclick="clickPerfil()">menu</li>
             </div>
         </div>
     </div>
+
+    <div class="menuflutuante" id="subsub">
+        <span class="blocomenuflu"></span>
+        <span class="conta">CONTA</span>
+        <span class="imagemperfil"></span>
+        <span class="nomeconta">@User</span>
+        <span class="contaemail">email@user</span>
+        <span class="gerenciarconta" onclick="gerenciarconta()">Gerenciar conta</span>
+        <span class="contadashboard" onclick="dashboard()">Dashboard</span>
+        <span class="contaconfig">Configurações</span>
+        <span class="contalinha"></span>
+        <span class="contalogout" onclick="logout()">Fazer Logout</span>
+      </div>
     <!-- CONTEÚDO -->
     <div class="conteudo">
         <div class="container">
@@ -51,3 +65,4 @@
 </body>
 
 </html>
+<script type="text/javascript" src="./script.js"></script>

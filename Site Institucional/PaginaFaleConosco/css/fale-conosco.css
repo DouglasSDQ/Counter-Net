@@ -15,6 +15,20 @@ body {
     background-color: #242424;
 }
 
+.header #iconmenuperfil {
+    display: flex;
+    cursor: pointer;
+}
+
+/* .Logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 10%; 
+    height: 70%;
+    margin-right: 65%;
+} */
+
 .navbar a {
     text-decoration: none;
     color: #B9B9B9;
@@ -40,6 +54,26 @@ body {
     font-weight: bold;
     color: #C36B1A;
 }
+/* EFEITO NA NAVBAR */
+
+#falehover:hover{
+    font-weight: bold;
+    color: #C36B1A;
+    font-size: 17px;
+}
+#sobrehover:hover{
+    font-weight: bold;
+    font-size: 17px;
+}
+#ajudahover:hover{
+    font-weight: bold;
+    font-size: 17px;
+}
+#homehover:hover{
+    font-weight: bold;
+    font-size: 17px;
+}
+/* FINAL EFEITO */
 
 #textonavbar{
     display: flex;
@@ -78,7 +112,7 @@ body {
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.61);
     backdrop-filter: blur(3px);
-    width: 50%;
+    width: 70%;
     border-radius: 10px;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -91,14 +125,29 @@ body {
     display: flex;
     flex-direction: column;
     color: #C36B1A;
-    border-radius: 10px;
     margin: auto;
     padding: 30px;
     width: 70%;
     height: 50vh;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.DivContato{
+    background-color: #242424c7;
+    display: flex;
+    flex-direction: column;
+    color: #C36B1A;
+    margin: auto;
+    padding: 30px;
+    width: 70%;
+    height: 50vh;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .formulario input{
+    background-color: rgba(255, 255, 255, 0.61);
     border-radius: 5px;
     border: none;
     margin-bottom: 10px;
@@ -114,6 +163,19 @@ body {
 .formulario h4{
     margin: 0;
 }
+
+.formulario textarea {
+    background-color: rgba(255, 255, 255, 0.61);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    box-sizing: border-box;
+    border: none; 
+}
+
+
+
 
 .formulario button {
     display: flex;
@@ -145,6 +207,44 @@ body {
     background-color: #c78a51;
     cursor: pointer;
 }
+#iconMail {
+    display: flex;
+    width: 3%;
+    height: 20%;
+    top: 29%;
+    left: 3%;
+}
+
+#iconTel {
+    display: flex;
+    width: 3%;
+    height: 20%;
+    top: 49%;
+    left: 3%;
+}
+
+#contato {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+#counternetTelefone {
+    margin-left: 1.5%;
+}
+
+#counternetEmail {
+    margin-left: 1.5%;
+}
+
+.IconesLado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
 /* FOOTER */
 
 .footer {
