@@ -29,7 +29,7 @@ body {
     display: flex;
     padding-bottom: 1.5%;
     width: 50%;
-    height: 80vh;
+    height: 65vh;
     background-color: #303030de;
     backdrop-filter: blur(3px);
     border: 2px solid #AE8406;
@@ -66,6 +66,7 @@ body {
     display: flex;
     width: 20%;
     height: 10vh;
+    margin-top: 3.5%;
 }
 
 .infopessoaisBloco {
@@ -103,46 +104,10 @@ body {
 
 }
 
-#nome_input {
+#TituloInput {
     display: flex;
-    margin-bottom: 1%;
-    margin-top: 1%;
-    color: black;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    margin-left: 1%;
-    font-weight: bold;
-}
-
-#email_input {
-    display: flex;
-    margin-bottom: 1%;
-    margin-top: 1%;
-    color: black;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    margin-left: 1%;
-    font-weight: bold;
-}
-
-#senha_input {
-    display: flex;
-    margin-bottom: 1%;
-    margin-top: 1%;
-    color: black;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    margin-left: 1%;
-    font-weight: bold;
-}
-
-#confimarSenha_input {
-    display: flex;
-    margin-bottom: 1%;
-    margin-top: 1%;
+    margin-bottom: 2%;
+    margin-top: 2%;
     color: black;
     font-style: normal;
     font-weight: 300;
@@ -173,6 +138,7 @@ body {
     background-color: white;
     color: black;
     outline: 0;
+    font-size: 10px;
 }
 
 .buttom {
@@ -213,6 +179,12 @@ justify-content: center;
     text-align: center;
     font-size: 13px;
     cursor: pointer;
+}
+
+#GoToCadastro a {
+margin-top: 2%;
+text-decoration: none;
+color: #c78a51;
 }
 
 #iconvoltar {

@@ -171,6 +171,7 @@ body {
 #i_email:focus {
     background-color: white;
     color: black;
+    outline: 0;
 }
 
 .nomeEDtNasc {
@@ -213,6 +214,7 @@ body {
 #i_nome:focus {
     background-color: white;
     color: black;
+    outline: 0;
 }
 
 #dtNascBloco {
@@ -348,6 +350,7 @@ body {
 #i_emailatual:focus {
     background-color: white;
     color: black;
+    outline: 0;
 }
 
 
@@ -376,6 +379,7 @@ body {
 #i_emailnovo:focus {
     background-color: white;
     color: black;
+    outline: 0;
 }
 
 #btn_alterar {
@@ -461,6 +465,7 @@ body {
 #i_senhaatual:focus {
     background-color: white;
     color: black;
+    outline: 0;
 }
 
 #senhaNova{
@@ -489,6 +494,7 @@ body {
 #i_senhanova:focus {
     background-color: white;
     color: black;
+    outline: 0;
 }
 
 
@@ -518,6 +524,7 @@ body {
 #i_senhanovaconfirmar:focus {
     background-color: white;
     color: black;
+    outline: 0;
 }
 
 #btn_alterarSenha{
