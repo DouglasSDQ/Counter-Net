@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/home.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+  />
+  <link rel="stylesheet" href="css/stylemenuflutuante.css" />
+  <title>Home | Counter Net</title>
+</head>
+<body>
+  <!-- HEADER -->
+  <div class="header">
+    <div class="navbar">
+      <div id="textonavbar">
+        <!-- <img class="Logo" src="../ImagensGerais/Logo CSGO.png"  alt=""> -->
+        <li id="homehover"><a href="">HOME</a></li>
+        <li id="sobrehover"><a href="sobre.html">SOBRE</a></li>
+        <li id="ajudahover"><a href="">AJUDA</a></li>
+        <li id="falehover">
+          <a href="fale-conosco.html">FALE CONOSCO</a>
+        </li>
+        <li>|</li>
+        <li
+          id="iconmenuperfil"
+          class="material-symbols-outlined"
+          onclick="clickPerfil()"
+        >
+          menu
+        </li>
+      </div>
+    </div>
+  </div>
+
+  <div class="menuflutuante" id="subsub">
+    <span class="blocomenuflu"></span>
+    <span class="conta">CONTA</span>
+    <span class="imagemperfil"></span>
+    <span class="nomeconta">@User</span>
+    <span class="contaemail">email@user</span>
+    <span class="gerenciarconta" onclick="gerenciarconta()"
+      >Gerenciar conta</span
+    >
+    <span class="contadashboard" onclick="dashboard()">Dashboard</span>
+    <span class="contaconfig">Configurações</span>
+    <span class="contalinha"></span>
+    <span class="contalogout" onclick="logout()">Fazer Logout</span>
+  </div>
+
+  <!-- MAJOR BLAST -->
+
+  <div class="MajorCSGO">
+    <div id="NovidadeMajor">BLAST <div style="color:#C36B1A; margin-left: 1%; margin-right: 1%;" >PARIS</div> 2023</div>
+
+    <div class="DivUmaLadoDaOutra">
+      <div class="TextoInfo">
+        <span id="ConteudoTexto">
+          Os Majors de CS:GO, também conhecidos como Campeonatos Mundiais de Counter-Strike: Global Offensive, são os maiores e mais prestigiosos torneios do jogo. Eles são organizados pela Valve Corporation em parceria com empresas de produção de eventos e equipes de esports. <br><br>
+
+          E na semana do dia 08/05 ao dia 21/05 irá ocorrer o <span style="font-weight: bold;">MAJOR BLAST PARIS 2023</span>, Ele será feito pela Valve Corporation em collab com a BLAST e que terá a premiação total de <span style="font-weight: bold; color: #C36B1A;">US$ 1,25 milhão (R$ 6,19 milhões, na cotação atual)</span>.
+          
+        </span>
+        </div>
+
+      <div class="LogoBlast">
+        
+      </div>
+
+      </div>
+  </div>
+
+  <!-- CARROSSEL -->
+  <div class="slider-major">
+    <div class="slides-major">
+      <!-- RADIO BUTTONS -->
+      <input type="radio" name="radio-btn" id="major1"/>
+      <input type="radio" name="radio-btn" id="major2"/>
+      <input type="radio" name="radio-btn" id="major3"/>
+      <input type="radio" name="radio-btn" id="major4"/>  
+      <!-- FIM RADIO BUTTONS -->
+
+      <!-- SLIDE IMAGENS -->
+      <div class="slide-major first-major">
+        <img src="assets/assetsInicial/blast_tv_paris_major_2023_jogos_tabelas_resultados_csgo_5d412f5acf.jpg" alt="imagem1" />
+      </div>
+
+      <div class="slide-major">
+        <img src="assets/assetsInicial/maxresdefault.jpg" alt="imagem2" />
+      </div>
+
+      <div class="slide-major">
+        <img src="assets/assetsInicial/Anubis.psd" alt="imagem3" />
+      </div>
+
+      <div class="slide-major">
+        <img src="assets/assetsInicial/fuamante-teste.jpg" alt="imagem4" />
+      </div>
+      <!-- FIM SLIDE IMAGENS -->
+      
+    </div>
+
+    <div class="manual-navigation-major">
+      <label for="major1" class="manual-btn-major"></label>
+      <label for="major2" class="manual-btn-major"></label>
+      <label for="major3" class="manual-btn-major"></label>
+      <label for="major4" class="manual-btn-major"></label>
+    </div>
+  </div>
+
+  <!-- CONTEUDO ARMAS -->
+
+  <div class="divSeparar"></div>
+
+  <div class="MapasCSGO">
+    <div id="NovidadeMajor">NOVOS <div style="color:#C36B1A; margin-left: 1%; margin-right: 1%;" >MAPAS</div> E MAPAS  <div style="color:#C36B1A; margin-left: 1%; margin-right: 1%;" >REMOVIDOS</div></div>
+
+    <div class="DivUmaLadoDaOutra">
+      <div class="TextoInfo">
+        <span id="ConteudoTexto">
+          Os mapas do CS:GO são continuamente atualizados e refinados pela desenvolvedora do jogo, a Valve, com base no feedback da comunidade e na análise do desempenho competitivo. Essas atualizações podem envolver alterações na geometria do mapa, adição ou remoção de elementos e ajustes nas posições de spawn ou rotas. <br><br>
+
+          Na atualização 1.42.1 o Counter Stike : Global Offensive (CS:GO) terá alguns mapas<span style="font-weight: bold;">REMOVIDOS</span>, mas em contrapartida <span style="font-weight: bold; color: #C36B1A;">2 NOVOS MAPAS</span> serão adicionados.
+          
+        </span>
+        </div>
+
+      <div class="LogoBlast">
+        
+      </div>
+
+      </div>
+  </div>
+
+  <!-- CONTEUDO FORA DO CARROSEL -->
+  
+  <<div class="MajorCSGO">
+    <div id="NovidadeMajor">BLAST <div style="color:#C36B1A; margin-left: 1%; margin-right: 1%;" >PARIS</div> 2023</div>
+
+    <div class="DivUmaLadoDaOutra">
+      <div class="TextoInfo">
+        <span id="ConteudoTexto">
+          Os Majors de CS:GO, também conhecidos como Campeonatos Mundiais de Counter-Strike: Global Offensive, são os maiores e mais prestigiosos torneios do jogo. Eles são organizados pela Valve Corporation em parceria com empresas de produção de eventos e equipes de esports. <br><br>
+
+          E na semana do dia 08/05 ao dia 21/05 irá ocorrer o <span style="font-weight: bold;">MAJOR BLAST PARIS 2023</span>, Ele será feito pela Valve Corporation em collab com a BLAST e que terá a premiação total de <span style="font-weight: bold; color: #C36B1A;">US$ 1,25 milhão (R$ 6,19 milhões, na cotação atual)</span>.
+          
+        </span>
+        </div>
+
+      <div class="LogoBlast">
+        
+      </div>
+
+      </div>
+  </div>
+
+
+  <!-- SLIDER AGENTES   
+  <div class="slider-agentes">
+    <div class="slides-agentes">
+      
+      <input type="radio" name="radio-btn-agentes" id="radio1-agentes" />
+      <input type="radio" name="radio-btn-agentes" id="radio2-agentes" />
+      <input type="radio" name="radio-btn-agentes" id="radio3-agentes" />
+      <input type="radio" name="radio-btn-agentes" id="radio4-agentes" />
+      
+
+      
+      <div class="slide-agentes first-agentes">
+        <img src="./assets/teste1.jpg" alt="imagem1" />
+      </div>
+
+      <div class="slide-agentes">
+        <img src="./assets/teste2.jpg" alt="imagem2" />
+      </div>
+
+      <div class="slide-agentes">
+        <img src="./assets/teste3.jpg" alt="imagem3" />
+      </div>
+
+      <div class="slide-agentes">
+        <img src="./assets/teste4.jpg" alt="imagem4" />
+      </div>
+      
+      
+    </div>
+
+    <div class="manual-navigation-agentes">
+      <label for="radio1-agentes" class="manual-btn-agentes"></label>
+      <label for="radio2-agentes" class="manual-btn-agentes"></label>
+      <label for="radio3-agentes" class="manual-btn-agentes"></label>
+      <label for="radio4-agentes" class="manual-btn-agentes"></label>
+    </div>
+  </div> -->
+
+  <!-- FOOTER -->
+
+  <div class="footer">
+    <div class="containerFooter">
+        <span id="DireitosReservados">TODOS OS DIREITOS RESERVADOS PELA COUNTER NET</span>
+    </div>
+</div>
+  
+
+</body>
+</html>
+<script src="js/funcoes.js"></script>
