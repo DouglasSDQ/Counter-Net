@@ -134,6 +134,18 @@ body {
     border-radius: 6px;
 }
 
+#i_senha {
+    display: flex;
+    color: black;
+    width: 90%;
+    font-size: 0.7vmax;
+    padding-left: 2%;
+    height: 3.5vh;
+    background-color: rgba(185, 150, 102, 0.87);
+    border: 1px solid #BD8500;
+    border-radius: 6px;
+}
+
 #i_email:focus {
     background-color: white;
     color: black;

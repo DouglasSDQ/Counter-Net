@@ -81,7 +81,7 @@
 
 </html>
 <script>
-    function clickVoltar() {
+   function clickVoltar() {
         window.location.href = "login.html"
     }
 
@@ -96,21 +96,21 @@
         var confirmacaoSenhaVar = input_ConfirmarSenha.value;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            cardErro.style.display = "block"
+           
             alert("Preencha todos os campos corretamente");
 
             return false;
         }
 
         if (senhaVar != confirmacaoSenhaVar) {
-            cardErro.style.display = "block"
+           
             alert("As senhas não coincidem")
 
             return false;
         }
 
         if(emailVar.indexOf('@') < 0){
-            cardErro.style.display = "block"
+           
             alert('Email inválido');
 
             return false;
@@ -135,7 +135,7 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                cardErro.style.display = "block";
+               ;
 
                 alert(`Cadastro realizado com sucesso, redirecionando para a tela de login...`);
 

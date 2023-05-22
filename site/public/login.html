@@ -27,12 +27,12 @@
 
 
                         <span id="TituloInput">Senha:</span>
-                        <input type="password" id="i_email"><br>
+                        <input type="password" id="i_senha"><br>
 
                         <span id="GoToCadastro">Ainda não tem uma conta ? <a href="cadastro.html">Crie Aqui</a></span>
 
                         <div class="buttom">
-                            <button id="btn_salvar">Entrar</button>
+                            <button id="btn_salvar" onclick="entrar()">Entrar</button>
                         </div>
 
 
@@ -47,21 +47,64 @@
 
 </html>
 <script>
-    function Cadastar() {
-        var nome = input_nome.value;
-        var email = input_email.value;
-        var senha = input_senha.value;
-        var confirmarSenha = input_ConfirmarSenha.value;
+     function entrar() {
+        
 
-        var CampoVazio = (nome == "" || email == "" || senha == "" || confirmarSenha == "")
+        var emailVar = i_email.value;
+        var senhaVar = i_senha.value;
 
-        if (CampoVazio) {
-            alert("Preencha todos os campos")
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            
+            return false;
         }
 
-    }
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
 
-    function clickVoltar() {
-        window.history.back();
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "home.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
     }
 </script>

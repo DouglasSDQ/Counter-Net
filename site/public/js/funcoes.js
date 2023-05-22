@@ -4,12 +4,14 @@ function validarSessao() {
 
     var email = sessionStorage.EMAIL_USUARIO;
     var nome = sessionStorage.NOME_USUARIO;
-
-    var b_usuario = document.getElementById("b_usuario");
+    
+    const contaemail = document.getElementById("contaemail");
+    const nomeconta = document.getElementById("nomeconta");
 
     if (email != null && nome != null) {
         // window.alert(`Seja bem-vindo, ${nome}!`);
-        b_usuario.innerHTML = nome;
+        contaemail.innerHTML = email;
+        nomeconta.innerHTML = nome;
 
         // finalizarAguardar();
     } else {
@@ -75,7 +77,7 @@ function gerenciarconta(){
 }
 
 function logout(){
-    window.location.href = "../PáginaInicial/home.html"
+    window.location.href = "login.html"
 }
 
 function home() {

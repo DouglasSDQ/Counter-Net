@@ -10,7 +10,7 @@
     <title>Fale Conosco | Counter Net</title>
 </head>
 
-<body>
+<body onload="validarSessao()">
     <!-- HEADER -->
     <div class="header">
         <div class="navbar">
@@ -30,13 +30,14 @@
         <span class="blocomenuflu"></span>
         <span class="conta">CONTA</span>
         <span class="imagemperfil"></span>
-        <span class="nomeconta">@User</span>
-        <span class="contaemail">email@user</span>
-        <span class="gerenciarconta" onclick="gerenciarconta()">Gerenciar conta</span>
+        <span class="nomeconta" id="nomeconta">@User</span>
+        <span class="contaemail" id="contaemail">email@user</span>
+        <span class="gerenciarconta" onclick="gerenciarconta()"
+          >Gerenciar conta</span
+        >
         <span class="contadashboard" onclick="dashboard()">Dashboard</span>
-        <span class="contaconfig">Configurações</span>
         <span class="contalinha"></span>
-        <span class="contalogout" onclick="logout()">Fazer Logout</span>
+        <span class="contalogout" onclick="limparSessao()">Fazer Logout</span>
       </div>
     <!-- CONTEÚDO -->
     <div class="conteudo">
