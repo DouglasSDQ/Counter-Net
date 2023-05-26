@@ -2,43 +2,38 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/login.css" />
     <title>Login | Counter Net</title>
 </head>
 
 <body>
     <div class="ContainerCentralizacao">
         <div class="blocoMarrom">
-                
-                <img src="assets/ImagensGerais/Logo CSGO.png" alt="" id="logo">
-                <div class="gerenciarTexto">Faça Login para ter acesso ao site</div>
-            
+            <img src="assets/ImagensGerais/Logo CSGO.png" alt="" id="logo" />
+            <div class="gerenciarTexto">Faça Login para ter acesso ao site</div>
 
             <div class="infopessoaisBloco">
                 <div class="IPparteEsquerda">
                     <div class="formulario">
-                        <span id="TituloInput">Email:</span>
-                        <input type="text" id="i_email">
 
+                        <span>Email: <span id="mensagem_erro_email"></span></span>
+                        <input type="text" id="i_email"><br>
 
-                        <span id="TituloInput">Senha:</span>
+                        <span >Senha: <span id="mensagem_erro_senha"></span></span>
                         <input type="password" id="i_senha"><br>
 
-                        <span id="GoToCadastro">Ainda não tem uma conta ? <a href="cadastro.html">Crie Aqui</a></span>
+                        <span id="GoToCadastro">Ainda não tem uma conta ?
+                            <a href="cadastro.html">Crie Aqui</a></span>
 
                         <div class="buttom">
                             <button id="btn_salvar" onclick="entrar()">Entrar</button>
                         </div>
-
-
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -47,64 +42,89 @@
 
 </html>
 <script>
-     function entrar() {
-        
-
+    function entrar() {
         var emailVar = i_email.value;
         var senhaVar = i_senha.value;
 
-        if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            
-            return false;
-        }
+        var BooleanaEmail = false;
+        var BooleanaSenha = false;
+
+    //  Validação email vazio
+
+    if (emailVar == "") {
+
+      mensagem_erro_email.innerHTML = `Campo email é obrigatório.`;
+
+    } else {
+
+      mensagem_erro_email.innerHTML = ``;
+
+      if (emailVar.indexOf("@") < 0) {
+
+        mensagem_erro_email.innerHTML = `Email inválido, campo email precisa conter (@proverdor.com).`;
+
+      }else{
+
+        BooleanaEmail = true;
+
+      }
+    }
+
+    //  Validação senha vazio
+
+    if (senhaVar == "") {
+      mensagem_erro_senha.innerHTML = `Campo senha é obrigatório.`;
+    } else {
+      mensagem_erro_senha.innerHTML = ``;
+      BooleanaSenha = true;
+    }
 
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
 
+
+    if(BooleanaEmail && BooleanaSenha){
         fetch("/usuarios/autenticar", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
             body: JSON.stringify({
                 emailServer: emailVar,
-                senhaServer: senhaVar
-            })
-        }).then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
-
-            if (resposta.ok) {
-                console.log(resposta);
-
-                resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
-
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
-
-                    setTimeout(function () {
-                        window.location = "home.html";
-                    }, 1000); // apenas para exibir o loading
-
-                });
-
-            } else {
-
-                console.log("Houve um erro ao tentar realizar o login!");
-
-                resposta.text().then(texto => {
-                    console.error(texto);
-                });
-            }
-
-        }).catch(function (erro) {
-            console.log(erro);
+                senhaServer: senhaVar,
+            }),
         })
+            .then(function (resposta) {
+                console.log("ESTOU NO THEN DO entrar()!");
 
-        return false;
+                if (resposta.ok) {
+                    console.log(resposta);
+
+                    resposta.json().then((json) => {
+                        console.log(json);
+                        console.log(JSON.stringify(json));
+
+                        sessionStorage.EMAIL_USUARIO = json.email;
+                        sessionStorage.NOME_USUARIO = json.nome;
+                        sessionStorage.ID_USUARIO = json.id;
+
+                        setTimeout(function () {
+                            window.location = "home.html";
+                        }, 1000); // apenas para exibir o loading
+                    });
+                } else {
+                    console.log("Houve um erro ao tentar realizar o login!");
+
+                    resposta.text().then((texto) => {
+                        console.error(texto);
+                    });
+                }
+            })
+            .catch(function (erro) {
+                console.log(erro);
+            });
+    }
+
+       
     }
 </script>

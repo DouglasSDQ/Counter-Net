@@ -16,7 +16,7 @@
 
 <body>
 
-    
+
 
     <div class="ContainerCentralizacao">
         <div class="blocoMarrom">
@@ -34,24 +34,16 @@
                 <div class="IPparteEsquerda">
                     <div class="formulario">
 
-                        <div id="cardErro">
-                            <span id="mensagem_erro"></span>
-                        </div>
-
-
-                        <span>Nome:</span>
+                        <span id="">Nome: <span id="mensagem_erro_nome"></span></span>
                         <input type="text" id="input_nome">
 
-
-                        <span>Email:</span>
+                        <span>Email: <span id="mensagem_erro_email"></span></span>
                         <input type="text" id="input_email">
 
-
-                        <span>Senha:</span>
+                        <span>Senha: <span id="mensagem_erro_senha"></span></span>
                         <input type="password" id="input_senha">
 
-
-                        <span>Confirmar Senha:</span>
+                        <span>Confirmar Senha: <span id="mensagem_erro_confirmar_senha"></span></span>
                         <input type="password" id="input_ConfirmarSenha">
 
                         <span id="GoToCadastro">Já tem uma conta ? <a href="login.html">Clique Aqui</a></span>
@@ -70,7 +62,7 @@
 
             </div>
 
-            
+
 
             <div id="div_aguardar" class="loading-div"></div>
             <div id="div_erros_login"></div>
@@ -81,7 +73,7 @@
 
 </html>
 <script>
-   function clickVoltar() {
+    function clickVoltar() {
         window.location.href = "login.html"
     }
 
@@ -95,29 +87,89 @@
         var senhaVar = input_senha.value;
         var confirmacaoSenhaVar = input_ConfirmarSenha.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-           
-            alert("Preencha todos os campos corretamente");
+        // BOOLEANAS VERIFICAÇÃO
 
-            return false;
+        var BooleanaNome = false;
+        var BooleanaEmail = false;
+        var BooleanaSenha = false;
+        var BooleanaConfirmarSenha = false;
+
+        //  Validação nome vazio
+
+        if (nomeVar == "") {
+
+            mensagem_erro_nome.innerHTML = `Campo nome é obrigatório.`;
+
+        } else {
+            mensagem_erro_nome.innerHTML = ``;
+            BooleanaNome = true;
         }
 
-        if (senhaVar != confirmacaoSenhaVar) {
-           
-            alert("As senhas não coincidem")
+        //  Validação email vazio
 
-            return false;
+        if (emailVar == "") {
+
+            mensagem_erro_email.innerHTML = `Campo email é obrigatório.`;
+
+        } else {
+            mensagem_erro_email.innerHTML = ``;
+
+            if (emailVar.indexOf('@') < 0) {
+
+
+                mensagem_erro_email.innerHTML = `Email inválido, campo email precisa conter (@proverdor.com).`;
+
+            } else {
+
+                BooleanaEmail = true;
+
+            }
+
+
         }
 
-        if(emailVar.indexOf('@') < 0){
-           
-            alert('Email inválido');
+        //  Validação senha vazio
 
-            return false;
+        if (senhaVar == "") {
+
+            mensagem_erro_senha.innerHTML = `Campo senha é obrigatório.`;
+
+        } else {
+
+            mensagem_erro_senha.innerHTML = ``;
+
+            BooleanaSenha = true;
         }
 
-        // Enviando o valor da nova input
-        fetch("/usuarios/cadastrar", {
+        //  Validação confirmar senha vazio
+
+        if (confirmacaoSenhaVar == "") {
+
+            mensagem_erro_confirmar_senha.innerHTML = `Campo confirmar senha é obrigatório.`;
+
+        } else {
+            mensagem_erro_confirmar_senha.innerHTML = ``;
+
+            if (senhaVar != confirmacaoSenhaVar) {
+            mensagem_erro_confirmar_senha.innerHTML = `A senha não coincide.`;
+            
+        }else{
+
+            mensagem_erro_confirmar_senha.innerHTML = ``;
+
+            BooleanaConfirmarSenha = true;
+
+        }
+        }
+
+        console.log("FORM NOME: ", nomeVar);
+        console.log("FORM EMAIL: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+        console.log("FORM CONFIRMARSENNHA: ", confirmacaoSenhaVar);
+
+        if(BooleanaNome && BooleanaEmail && BooleanaSenha && BooleanaConfirmarSenha){
+
+            fetch("/usuarios/cadastrar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -135,7 +187,7 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-               ;
+                ;
 
                 alert(`Cadastro realizado com sucesso, redirecionando para a tela de login...`);
 
@@ -143,7 +195,7 @@
 
                 setTimeout(() => {
                     window.location = "login.html";
-                }, "2000")
+                }, "1000")
 
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
@@ -153,6 +205,6 @@
 
         });
 
-        return false;
+        }
     }
 </script>

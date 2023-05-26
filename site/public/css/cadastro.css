@@ -103,6 +103,15 @@ body {
 
 }
 
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+
  .formulario input {
     display: flex;
     margin-bottom: 1%;
@@ -189,12 +198,6 @@ justify-content: center;
     color: #c78a51;
 }
 
-#cardErro #mensagem_erro{
-    display: flex;
-    justify-content: center;
-    color: red;
-    font-size: 20px;
-  }
 
   .loading-div {
     width: 50px;
@@ -210,4 +213,31 @@ justify-content: center;
     margin-top: 2%;
     text-decoration: none;
     color: #c78a51;
+    }
+
+    #mensagem_erro_nome {
+        color: red;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    #mensagem_erro_email{
+        color: red;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    #mensagem_erro_senha {
+        color: red;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    #mensagem_erro_confirmar_senha {
+        color: red;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    #mensagem_erro_email_invalido{
+        color: red;
+        font-size: 13px;
+        font-weight: bold;
     }
