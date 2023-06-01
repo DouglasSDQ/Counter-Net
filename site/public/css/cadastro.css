@@ -121,6 +121,7 @@ body {
     background-color: rgba(185, 150, 102, 0.87);
     border: 1px solid #BD8500;
     width: 98%;
+    font-size: 16px;
 }
 
 
@@ -134,7 +135,7 @@ body {
     display: flex;
     color: black;
     width: 90%;
-    font-size: 0.7vmax;
+    font-size: 16px;
     padding-left: 2%;
     height: 3.5vh;
     background-color: rgba(185, 150, 102, 0.87);

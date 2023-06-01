@@ -127,7 +127,7 @@ body {
     display: flex;
     color: black;
     width: 90%;
-    font-size: 0.7vmax;
+    font-size: 16px;
     padding-left: 2%;
     height: 3.5vh;
     background-color: rgba(185, 150, 102, 0.87);
@@ -139,7 +139,7 @@ body {
     display: flex;
     color: black;
     width: 90%;
-    font-size: 0.7vmax;
+    font-size: 16px;
     padding-left: 2%;
     height: 3.5vh;
     background-color: rgba(185, 150, 102, 0.87);
@@ -151,7 +151,14 @@ body {
     background-color: white;
     color: black;
     outline: 0;
-    font-size: 10px;
+    font-size: 16px;
+}
+
+#i_senha:focus {
+    background-color: white;
+    color: black;
+    outline: 0;
+    font-size: 16px;
 }
 
 #mensagem_erro_email{

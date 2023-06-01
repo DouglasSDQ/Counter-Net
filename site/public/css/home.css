@@ -348,31 +348,22 @@ body {
 /* CONTEUDO */
 .MapasCSGO {
     width: 100%;
-    height: 60vh;
+    display: flex;
 }
 
 .MajorCSGO {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 60vh;
+    height: 300px;
     background-image: url(../assets/assetsInicial/drogas.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center right;
 }
 
-.ArmasCSGO {
-    width: 100%;
-    height: 100vh;
-}
 
 #NovidadeMapa {
-    display: flex;
-    justify-content: center;
-    font-size: 40px;
-    font-weight: bold;
-}
-
-#NovidadeArmas {
     display: flex;
     justify-content: center;
     font-size: 40px;
@@ -386,23 +377,60 @@ body {
     font-weight: bold;
 }
 
-.TextoInfo {
+.TextoInfoMapa {
     display: flex;
     justify-content: center;
     width: 60%;
-    height: 30vh;
+    height: 100%;
     margin-left: 5%;
     margin-top: 2%;
 }
 
-.DivUmaLadoDaOutra {
+.TextoInfoMajor {
     display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 65%;
+    margin-left: 5%;
+    margin-top: 2%;
 }
 
 #ConteudoTexto {
-    margin: 2%;
+    height: 100%;
     font-size: 20px;
     text-align: justify;
+}
+
+.divSeparar {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.BotaoConfira{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+}
+
+#bt_Botao{
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #C36B1A;
+    border: 1px solid black;
+    width: 70%;
+    height: 10%;   
+    cursor: pointer;
+}
+
+#bt_Botao:hover{
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #c09064;
+    border: 1px solid black;
+    width: 70%;   
+    height: 10%; 
+    cursor: pointer;
 }
 
 /* FOOTER */
@@ -427,10 +455,4 @@ body {
 
     align-items: center;
     justify-content: center;
-}
-
-.divSeparar {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    width: 100%;
 }
