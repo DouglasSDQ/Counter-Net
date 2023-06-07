@@ -24,7 +24,7 @@
                         <span>Email: <span id="mensagem_erro_email"></span></span>
                         <input type="text" id="i_email"><br>
 
-                        <span >Senha: <span id="mensagem_erro_senha"></span></span>
+                        <span>Senha: <span id="mensagem_erro_senha"></span></span>
                         <input type="password" id="i_senha"><br>
 
                         <span id="GoToCadastro">Ainda não tem uma conta ?
@@ -49,81 +49,91 @@
         var BooleanaEmail = false;
         var BooleanaSenha = false;
 
-    //  Validação email vazio
+        //  Validação email vazio
 
-    if (emailVar == "") {
+        if (emailVar == "") {
 
-      mensagem_erro_email.innerHTML = `Campo email é obrigatório.`;
+            mensagem_erro_email.innerHTML = `Campo email é obrigatório.`;
 
-    } else {
+        } else {
 
-      mensagem_erro_email.innerHTML = ``;
+            mensagem_erro_email.innerHTML = ``;
 
-      if (emailVar.indexOf("@") < 0) {
+            if (emailVar.indexOf("@") < 0) {
 
-        mensagem_erro_email.innerHTML = `Email inválido, campo email precisa conter (@proverdor.com).`;
+                mensagem_erro_email.innerHTML = `Email inválido, campo email precisa conter (@proverdor.com).`;
 
-      }else{
+            } else {
 
-        BooleanaEmail = true;
+                BooleanaEmail = true;
 
-      }
-    }
+            }
+        }
 
-    //  Validação senha vazio
+        //  Validação senha vazio
 
-    if (senhaVar == "") {
-      mensagem_erro_senha.innerHTML = `Campo senha é obrigatório.`;
-    } else {
-      mensagem_erro_senha.innerHTML = ``;
-      BooleanaSenha = true;
-    }
+        if (senhaVar == "") {
+            mensagem_erro_senha.innerHTML = `Campo senha é obrigatório.`;
+        } else {
+            mensagem_erro_senha.innerHTML = ``;
+            BooleanaSenha = true;
+        }
 
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
 
 
-    if(BooleanaEmail && BooleanaSenha){
-        fetch("/usuarios/autenticar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                emailServer: emailVar,
-                senhaServer: senhaVar,
-            }),
-        })
-            .then(function (resposta) {
-                console.log("ESTOU NO THEN DO entrar()!");
+        if (BooleanaEmail && BooleanaSenha) {
+            fetch("/usuarios/autenticar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    emailServer: emailVar,
+                    senhaServer: senhaVar,
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("ESTOU NO THEN DO entrar()!");
 
-                if (resposta.ok) {
-                    console.log(resposta);
-
-                    resposta.json().then((json) => {
-                        console.log(json);
-                        console.log(JSON.stringify(json));
-
-                        sessionStorage.EMAIL_USUARIO = json.email;
-                        sessionStorage.NOME_USUARIO = json.nome;
+                    if (resposta.ok) {
+                        console.log(resposta);
 
                         setTimeout(function () {
-                            window.location = "home.html";
-                        }, 1000); // apenas para exibir o loading
-                    });
-                } else {
-                    console.log("Houve um erro ao tentar realizar o login!");
+                               alert("Login realizado com sucesso, redirecionando para a pagina inicial...")
+                            }, 100);
+                        
 
-                    resposta.text().then((texto) => {
-                        console.error(texto);
-                    });
-                }
-            })
-            .catch(function (erro) {
-                console.log(erro);
-            });
-    }
+                        resposta.json().then((json) => {
+                            console.log(json);
+                            console.log(JSON.stringify(json));
 
-       
+                            sessionStorage.EMAIL_USUARIO = json.email;
+                            sessionStorage.NOME_USUARIO = json.nome;
+
+                            setTimeout(function () {
+                                window.location = "home.html";
+                            }, 1000); // apenas para exibir o loading
+                        });
+                    } else {
+                        console.log("Houve um erro ao tentar realizar o login!");
+
+                        resposta.text().then((texto) => {
+                            console.error(texto);
+                            setTimeout(function () {
+                               alert("Houve um erro ao tentar realizar o login!")
+                            }, 1050);
+                        });
+                    }
+                })
+                .catch(function (erro) {
+                    console.log(erro);
+                });
+
+           
+        }
+
+
     }
 </script>
