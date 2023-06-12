@@ -51,7 +51,7 @@
     
       <div class="containerConteudo">
 
-        <div id="DivDust" class="scroll">
+        <div id="DivDust" class="scroll" onclick="dust()">
           <h2>DUST II</h2>
         </div><br>
 
@@ -102,8 +102,26 @@
       </div><br>
     
     <div class="MostrarInfoMapas">
-      <div class="parteEsquerda"></div>
-      <div class="parteDireita"></div>
+      <div class="parteEsquerda">
+
+        <div class="BlocaoMarromInfos" id="blocaoMarromInfo">
+          <div class="containerBlocaoInfos">
+          <span id="categoriaExibida">Financeiro</span>
+          <span id="fraseExibida"></span>
+          </div>
+        </div>
+
+      </div>
+      <div class="parteDireita">
+
+        <div class="BlocaoMarromInfos" id="blocaoMarromInfo">
+          <div class="containerBlocaoInfos">
+          <span id="categoriaExibida">Financeiro</span>
+          <span id="fraseExibida"></span>
+          </div>
+        </div>
+
+      </div>
     </div>
 
   </div>
@@ -121,3 +139,4 @@
 
 </html>
 <script src="js/funcoes.js"></script>
+<script src="js/mapas.js"></script>

@@ -25,3 +25,8 @@ function logout(){
 function home() {
     window.location.href = "../PáginaInicial/home.html"
 }
+
+
+function dust(){
+    window.location.href = "mapas.html"
+}

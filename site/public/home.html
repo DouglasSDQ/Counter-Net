@@ -86,7 +86,7 @@
       </div>
 
       <div class="slide-major">
-        <img src="assets/assetsInicial/Anubis.psd" alt="imagem3" />
+        <img src="" alt="imagem3" />
       </div>
 
       <div class="slide-major">
@@ -107,9 +107,12 @@
   <!-- CONTEUDO MAPAS -->
 
   <div class="divSeparar"></div>
-  <div id="NovidadeMapa"><span style="color: #C36B1A; margin-right: 1%;"> Atualizações</span> nos mapas.</div>
-  <div class="MapasCSGO">
 
+  <div id="SobreMapas">
+  
+  <div class="MapasCSGO">
+    <div id="NovidadeMapa"><span style="color: #C36B1A; margin-right: 1%;"> Atualizações</span> nos mapas.</div>
+    <div class="separacaoInterna">
       <div class="TextoInfoMapa">
         <span id="ConteudoTexto">
           A Valve, desenvolvedora do CS:GO, está constantemente atualizando e refinando os mapas do jogo com base no feedback da comunidade e na análise do desempenho competitivo. Essas atualizações visam melhorar a jogabilidade e a experiência dos jogadores. Na mais recente atualização, a 1.42.1, alguns mapas serão <span style="color: #C36B1A; margin: 0.25%; font-weight: bold;">removidos</span>, no entanto, em compensação, novos mapas serão <span style="color: blue; margin: 0.25%; font-weight: bold;">adicionados</span> ao jogo. <br><br>
@@ -118,53 +121,41 @@
           
           Portanto, os jogadores podem esperar uma experiência de jogo renovada e emocionante com a adição dos novos mapas, além de melhorias nos mapas existentes. O CS:GO continua evoluindo para garantir que os fãs do jogo tenham sempre conteúdo fresco e desafiador para desfrutar. <br><br>
         </span>
-      </div>
 
+        
+      </div>
       <div class="BotaoConfira">
-        <button id="bt_Botao" onclick="PaginaMapas()">Confira</button>
+        <button id="bt_Botao" onclick="PaginaMapas()">CONFIRA <span style="color: white; margin-left: 1%;">AQUI!!</span></button>
       </div>
+    </div>
+
+      
   </div>
+  
 
-  <!-- CONTEUDO FORA DO CARROSEL -->
+  <div id="ConfiraMapa">Veja <span style="color: #C36B1A; margin-left: 1%; margin-right: 1%;">mais</span> mapas !!</div><br><br>
+  <div class="containerConteudo">
 
+    <div id="DivDust" class="scroll" onclick="dust()"></div><br>
 
-  <!-- SLIDER AGENTES   
-  <div class="slider-agentes">
-    <div class="slides-agentes">
-      
-      <input type="radio" name="radio-btn-agentes" id="radio1-agentes" />
-      <input type="radio" name="radio-btn-agentes" id="radio2-agentes" />
-      <input type="radio" name="radio-btn-agentes" id="radio3-agentes" />
-      <input type="radio" name="radio-btn-agentes" id="radio4-agentes" />
-      
+    <div id="DivMirage" class="scroll"></div><br>
 
-      
-      <div class="slide-agentes first-agentes">
-        <img src="./assets/teste1.jpg" alt="imagem1" />
-      </div>
+    <div id="DivInferno" class="scroll"></div><br>
 
-      <div class="slide-agentes">
-        <img src="./assets/teste2.jpg" alt="imagem2" />
-      </div>
+    <div id="DivNuke" class="scroll"></div><br>
 
-      <div class="slide-agentes">
-        <img src="./assets/teste3.jpg" alt="imagem3" />
-      </div>
+    <div id="DivOverpass" class="scroll"> </div><br>
 
-      <div class="slide-agentes">
-        <img src="./assets/teste4.jpg" alt="imagem4" />
-      </div>
-      
-      
-    </div>
+    <div id="DivTrain" class="scroll"></div><br>
 
-    <div class="manual-navigation-agentes">
-      <label for="radio1-agentes" class="manual-btn-agentes"></label>
-      <label for="radio2-agentes" class="manual-btn-agentes"></label>
-      <label for="radio3-agentes" class="manual-btn-agentes"></label>
-      <label for="radio4-agentes" class="manual-btn-agentes"></label>
-    </div>
-  </div> -->
+    <div id="DivCache" class="scroll"></div><br>
+
+    <div id="DivCobble" class="scroll"></div><br>
+
+    <div id="DivVertigo" class="scroll"></div><br>
+
+  </div>
+</div> <br><br>
 
   <!-- FOOTER -->
 
@@ -184,3 +175,4 @@
   }
 </script>
 <script src="js/funcoes.js"></script>
+<script src="js/home.js"></script>

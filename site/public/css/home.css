@@ -172,182 +172,14 @@ body {
 /* FIM SLIDER MAJOR */
 
 
-
-/* SLIDER NORMAL */
-
-.slider {
-    width: 100%;
-    height: 40vh;
-    overflow: hidden;
-}
-
-.slides {
-    width: 400%;
-    height: 100%;
-    display: flex;
-}
-
-.slides input {
-    display: none;
-}
-
-.slide {
-    width: 25%;
-}
-
-.slide {
-    width: 25%;
-}
-
-.slide img {
-    width: 100%;
-    height: 40vh;
-}
-
-.manual-navigation {
-    width: 100%;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.manual-btn {
-    border: 2px solid white;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.35s;
-}
-
-.manual-btn {
-    border: 2px solid white;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.35s;
-}
-
-.manual-btn:not(:last-child) {
-    margin-right: 40px;
-}
-
-.manual-btn:hover {
-    background-color: white;
-}
-
-
-
-#radio1:checked~.first {
-    margin-left: 0;
-    transition: 0.75s;
-}
-
-#radio2:checked~.first {
-    margin-left: -25%;
-    transition: 0.75s;
-}
-
-#radio3:checked~.first {
-    margin-left: -50%;
-    transition: 0.75s;
-}
-
-#radio4:checked~.first {
-    margin-left: -75%;
-    transition: 0.75s;
-}
-
-/* FIM SLIDER NORMAL */
-
-
-/* SLIDER AGENTE */
-
-.slider-agentes {
-    width: 100%;
-    height: 40vh;
-    overflow: hidden;
-}
-
-.slides-agentes {
-    width: 400%;
-    height: 100%;
-    display: flex;
-}
-
-.slides-agentes input {
-    display: none;
-}
-
-.slide-agentes {
-    width: 25%;
-}
-
-.slide-agentes img {
-    width: 100%;
-    height: 40vh;
-}
-
-.manual-navigation-agentes {
-    width: 100%;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.manual-btn-agentes {
-    border: 2px solid white;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.35s;
-}
-
-.manual-btn-agentes {
-    border: 2px solid white;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.35s;
-}
-
-.manual-btn-agentes:not(:last-child) {
-    margin-right: 40px;
-}
-
-.manual-btn-agentes:hover {
-    background-color: white;
-}
-
-
-
-#radio1-agentes:checked~.first-agentes {
-    margin-left: 0;
-    transition: 0.75s;
-}
-
-#radio2-agentes:checked~.first-agentes {
-    margin-left: -25%;
-    transition: 0.75s;
-}
-
-#radio3-agentes:checked~.first-agentes {
-    margin-left: -50%;
-    transition: 0.75s;
-}
-
-#radio4-agentes:checked~.first-agentes {
-    margin-left: -75%;
-    transition: 0.75s;
-}
-
-/* FIM SLIDER AGENTE */
-
-
 /* CONTEUDO */
 .MapasCSGO {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.separacaoInterna{
     display: flex;
 }
 
@@ -362,12 +194,27 @@ body {
     background-position: center right;
 }
 
+#SobreMapas{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
 
 #NovidadeMapa {
     display: flex;
     justify-content: center;
     font-size: 40px;
     font-weight: bold;
+    width: 100%;
+}
+
+#ConfiraMapa{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    width: 100%;
 }
 
 #NovidadeMajor {
@@ -417,20 +264,154 @@ body {
     font-weight: bold;
     border-radius: 10px;
     background-color: #C36B1A;
-    border: 1px solid black;
+    border: currentColor;
     width: 70%;
     height: 10%;   
     cursor: pointer;
+    font-size: 20px;
 }
 
 #bt_Botao:hover{
     font-weight: bold;
     border-radius: 10px;
     background-color: #c09064;
-    border: 1px solid black;
     width: 70%;   
     height: 10%; 
     cursor: pointer;
+}
+
+
+.containerConteudo {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 88%;
+    height: 240px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    padding: 1%;
+    align-items: center;
+
+}
+
+.containerConteudo::-webkit-scrollbar{
+    width: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    height: 7px;
+}
+
+.containerConteudo::-webkit-scrollbar-thumb{
+    background-color: #838383;
+    border-radius: 10px;
+    
+}
+
+.containerConteudo h2 {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.containerConteudo div{
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 10px;
+    
+}
+
+#DivDust {
+    min-width: 20%;
+    height: 100%;
+    border: 1px solid white;
+    cursor: pointer;
+    background-image: url(../assets/assetsInicial/Scrollbar-horizontal/dust2.png);
+    background-size: cover;
+}
+
+#DivMirage {
+    min-width: 20%;
+    height: 100%;
+    border: 1px solid white;
+    cursor: pointer;
+    background-image: url(../assets/assetsInicial/Scrollbar-horizontal/Mirage.png);
+    background-size: cover;
+}
+
+#DivInferno {
+    min-width: 20%;
+    height: 100%;
+    border: 1px solid white;
+    cursor: pointer;
+    background-image: url(../assets/assetsInicial/Scrollbar-horizontal/Inferno\ 2.png);
+    background-size: cover;
+}
+
+#DivNuke {
+    min-width: 20%;
+    height: 100%;
+    border: 1px solid white;
+    cursor: pointer;
+    background-image: url(../assets/assetsInicial/Scrollbar-horizontal/Nuke.png);
+    background-size: cover;
+}
+
+#DivOverpass {
+    min-width: 20%;
+    height: 100%;
+    border: 1px solid white;
+    cursor: pointer;
+    background-image: url(../assets/assetsInicial/Scrollbar-horizontal/Overpass.png);
+    background-size: cover;
+
+}
+
+#DivTrain {
+    min-width: 20%;
+    height: 100%;
+    border: 1px solid white;
+    cursor: pointer;
+    background-image: url(../assets/assetsInicial/Scrollbar-horizontal/train.png);
+    background-size: cover;
+}
+
+#DivCache {
+    min-width: 20%;
+    height: 100%;
+    border: 1px solid white;
+    cursor: pointer;
+    background-image: url(../assets/assetsInicial/Scrollbar-horizontal/Cache.png);
+    background-size: cover;
+}
+
+#DivCobble {
+
+    min-width: 20%;
+    height: 100%;
+    border: 1px solid white;
+    cursor: pointer;
+    background-image: url(../assets/assetsInicial/Scrollbar-horizontal/Cobblestone.png);
+    background-size: cover;
+}
+
+#DivVertigo {
+    min-width: 20%;
+    height: 100%;
+    border: 1px solid white;
+    cursor: pointer;
+    background-image: url(../assets/assetsInicial/Scrollbar-horizontal/vertigo.png);
+    background-size: cover;
+
+}
+
+.scroll {
+    display: flex;
+    min-height: 15%;
+    width: 100%;
 }
 
 /* FOOTER */
