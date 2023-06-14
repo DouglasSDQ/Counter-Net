@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/votacao.css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="css/stylemenuflutuante.css" />
+  <script src="./js/funcoes.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="header">
+        <img class="Logo" src="./assets/ImagensGerais/Logo CSGO.png" style="width: 7%; height: 60%; cursor: pointer;" alt="" onclick="home()">
+        <div class="navbar">
+          <div id="textonavbar">
+            <!-- <img class="Logo" src="../ImagensGerais/Logo CSGO.png"  alt=""> -->
+            <li id="homehover"><a href="">HOME</a></li>
+            <li id="sobrehover"><a href="sobre.html">SOBRE</a></li>
+            <li id="ajudahover"><a href="">AJUDA</a></li>
+            <li id="falehover">
+              <a href="fale-conosco.html">FALE CONOSCO</a>
+            </li>
+            <li>|</li>
+            <li id="iconmenuperfil" class="material-symbols-outlined" onclick="clickPerfil()">
+              menu
+            </li>
+          </div>
+        </div>
+      </div>
+    
+      <div class="menuflutuante" id="subsub">
+        <span class="blocomenuflu"></span>
+        <span class="conta">CONTA</span>
+        <span class="imagemperfil"></span>
+        <span class="nomeconta" id="nomeconta">@User</span>
+        <span class="contaemail" id="contaemail">email@user</span>
+        <span class="gerenciarconta" onclick="gerenciarconta()">Gerenciar conta</span>
+        <span class="contadashboard" onclick="dashboard()">Dashboard</span>
+        <span class="contalinha"></span>
+        <span class="contalogout" onclick="limparSessao()">Fazer Logout</span>
+      </div>
+    <!-- FIM HEADER -->
+
+    <!-- CHECKBOX -->
+
+<div class="container">
+
+    <form id="FormularioVoto">
+        <div class="Titulo">
+            <h2 style="color: #C36B1A;">Selecione seu mapa favorito.</h1>
+        </div>
+
+        <div class="DivSeparacao">
+            <hr style="border: none; border-top: 1px solid #B9B9B9; margin: 0;">
+        </div>
+
+        <div class="geral">
+           
+                <div class="Opcao">
+                    Dust II <input name="markers" type="radio" value="Dust II">
+                </div>
+
+                <div class="Opcao">
+                    Mirage <input name="markers" type="radio" value="Mirage">
+                </div>
+
+                <div class="Opcao">
+                    Inferno <input name="markers" type="radio" value="Inferno">
+                </div>
+
+                <div class="Opcao">
+                    Nuke <input name="markers" type="radio" value="Nuke">
+                </div>
+
+                <div class="Opcao">
+                    Overpass <input name="markers" type="radio" value="Overpass">
+                </div>
+            
+
+                <div class="Opcao">
+                    Train <input name="markers" type="radio" value="Train">
+                </div>
+
+                <div class="Opcao">
+                    Cache <input name="markers" type="radio" value="Cache">
+                </div>
+
+                <div class="Opcao">
+                    Cobblestone <input name="markers" type="radio" value="Cobblestone">
+                </div>
+
+                <div class="Opcao">
+                    Vertigo <input name="markers" type="radio" value="Vertigo">
+                </div>
+        </div>
+
+        <div class="DivSeparacao">
+            <hr style="border: none; border-top: 1px solid #b9b9b9; margin: 0;">
+        </div>
+
+        <div class="DivBotao">
+           <button onclick="pegarVoto()">Enviar</button>
+        </div>
+
+    </form>
+
+</div>
+    <!-- FIM CHECKBOX -->
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="containerFooter">
+          <span id="DireitosReservados">TODOS OS DIREITOS RESERVADOS PELA COUNTER NET</span>
+        </div>
+      </div>
+    <!-- FIM FOOTER -->
+</body>
+
+</html>
+<script>
+ var mapaSelecionado = [];
+    function pegarVoto() {
+
+
+        document.getElementById('FormularioVoto').addEventListener('submit', function (event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            var form = event.target;
+            var checkboxes = form.querySelectorAll('input[type="radio"]:checked');
+           
+
+            for (var i = 0; i < checkboxes.length; i++) {
+                mapaSelecionado.push(checkboxes[i].value);
+            }
+
+            // Aqui você pode processar as opções selecionadas como desejar
+           
+                var votoUsuario = mapaSelecionado[0];
+                sessionStorage.VOTO_USUARIO = votoUsuario;
+                fetch("/usuarios/pegarVoto", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        
+
+                        idUsuarioServer: sessionStorage.ID_USUARIO,
+                        votoUsuarioServer: votoUsuario,
+                        
+                    })
+                }).then(function (resposta) {
+                    if (resposta.ok) {
+                        console.log(resposta);
+
+                        window.location = 'dashboard.html'
+
+
+                    }
+                }).catch(function (resposta) {
+                    console.log("Erro ao capturar o voto, tente novamente!");
+                })
+            
+
+
+            
+        });
+
+
+
+
+    }
+</script>

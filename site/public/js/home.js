@@ -10,7 +10,7 @@ function clickPerfil() {
 
 
 function dashboard() {
-    window.location.href = "../PaginadeConsulta/consulta.html"
+    window.location.href = "../dashboard.html"
 }
 
 function gerenciarconta(){
@@ -23,7 +23,7 @@ function logout(){
 }
 
 function home() {
-    window.location.href = "../PáginaInicial/home.html"
+    window.location.href = "../home.html"
 }
 
 

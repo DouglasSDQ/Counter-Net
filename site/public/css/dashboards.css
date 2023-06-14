@@ -49,11 +49,6 @@ body {
 
 }
 
-#homehover a {
-  font-weight: bold;
-  color: #C36B1A;
-}
-
 /* EFEITO NA NAVBAR */
 
 #falehover:hover {
@@ -88,6 +83,95 @@ body {
 }
 
 /* CONTEÚDO */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 120vh;
+  background-color: #414141;
+}
+
+.Informacoes {
+  
+  display: flex;
+  width: 95%;
+  height: 95%;
+  background-color: #B9B9B9;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card{
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  height: 80%;
+  border-radius: 10px;
+  flex-direction: column;
+  background-color: rgb(218, 218, 218);
+}
+
+.Localidade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.card span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  height: 30px;
+  background-color: #C36B1A;
+}
+
+.plotInformacoes{
+  color: #C36B1A;
+}
+
+.cards  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+  justify-content: space-around;
+}
+
+.graficoGrande {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 94.8%;
+  height: 70%;
+  background-color: rgb(218, 218, 218);
+  margin-bottom: 1.75%;
+  border-radius: 10px;
+
+}
+
+.GraficoDentro {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+
+
 
 
 /* FIM CONTEÚDO */

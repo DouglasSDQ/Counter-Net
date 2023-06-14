@@ -264,7 +264,6 @@ flex-direction: column;
     font-weight: bold;
     border-radius: 10px;
     background-color: #C36B1A;
-    border: currentColor;
     width: 70%;
     height: 10%;   
     cursor: pointer;
@@ -278,7 +277,34 @@ flex-direction: column;
     width: 70%;   
     height: 10%; 
     cursor: pointer;
+    font-size: 20px;
 }
+
+#bt_formulario{
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #C36B1A;
+    border: currentColor;
+    width: 40%;
+    height: 30%;   
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#bt_formulario:hover{
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #c09064;
+    border: currentColor;
+    width: 40%;
+    height: 30%;   
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+
+
 
 
 .containerConteudo {
