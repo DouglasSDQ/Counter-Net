@@ -4,12 +4,12 @@
 
 Visualisação de dados: 
 
-<img src="./ImagensREADME/dashboard.png" height="100px"/>
+<img src="./ImagensREADME/dashboard.png" height="500px" width="800px"/>
 
 
 Informações sobre os mapas:
 
-<img src="./ImagensREADME/mapas.png" height="100px"/>
+<img src="./ImagensREADME/mapas.png" height="500px" width="800px"/>
 
 
 ## Ferramentas utilizadas 
