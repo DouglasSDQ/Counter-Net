@@ -51,30 +51,27 @@ body {
 
 #homehover a {
     font-weight: bold;
+    font-size: 17px;
     color: #C36B1A;
 }
 
 /* EFEITO NA NAVBAR */
-
-#falehover:hover {
+#homehover:hover a {
     font-weight: bold;
     color: #C36B1A;
     font-size: 17px;
 }
 
-#sobrehover:hover {
+#sobrehover:hover a {
     font-weight: bold;
     font-size: 17px;
+    color: #C36B1A;
 }
 
-#ajudahover:hover {
+#ajudahover:hover a {
     font-weight: bold;
     font-size: 17px;
-}
-
-#homehover:hover {
-    font-weight: bold;
-    font-size: 17px;
+    color: #C36B1A;
 }
 
 /* FINAL EFEITO */
@@ -242,7 +239,24 @@ flex-direction: column;
     margin-top: 2%;
 }
 
+.TextoInfoCS2{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 65%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
 #ConteudoTexto {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    text-align: justify;
+}
+
+#ConteudoTextoCS2 {
+    width: 100%;
     height: 100%;
     font-size: 20px;
     text-align: justify;

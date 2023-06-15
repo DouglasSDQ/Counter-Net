@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/sobremim.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="css/stylemenuflutuante.css" />
+    <title>Home | Counter Net</title>
+</head>
+
+<body onload="validarSessao()">
+
+    <!-- HEADER -->
+    <div class="header">
+        <img class="Logo" src="./assets/ImagensGerais/logoCSGO.png" style="width: 7%; height: 60%; cursor: pointer;" alt=""
+          onclick="home()">
+        <div class="navbar">
+          <div id="textonavbar">
+            <!-- <img class="Logo" src="../ImagensGerais/Logo CSGO.png"  alt=""> -->
+            <li id="homehover"><a href="home.html">HOME</a></li>
+            <li id="sobrehover"><a href="mapas.html">MAPAS</a></li>
+            <li id="ajudahover"><a href="sobremim.html">SOBRE MIM</a></li>
+            <li>|</li>
+            <li id="iconmenuperfil" class="material-symbols-outlined" onclick="clickPerfil()">
+              menu
+            </li>
+          </div>
+        </div>
+      </div>
+    <div class="menuflutuante" id="subsub">
+        <span class="blocomenuflu"></span>
+        <span class="conta">CONTA</span>
+        <span class="imagemperfil"></span>
+        <span class="nomeconta" id="nomeconta">@User</span>
+        <span class="contaemail" id="contaemail">email@user</span>
+        <span class="gerenciarconta" onclick="gerenciarconta()">Gerenciar conta</span>
+        <span class="contadashboard" onclick="dashboard()">Dashboard</span>
+        <span class="contalinha"></span>
+        <span class="contalogout" onclick="limparSessao()">Fazer Logout</span>
+    </div>
+
+    <!-- CONTEUDO -->
+
+    <div class="container">
+       <div class="containerExposto">
+
+        <div class="SobreMim">
+            <div class="InfoPessoais">
+
+                <div class="ParteCima">
+
+                    <div class="Foto"></div>
+                    <div class="Nome">Douglas Silva de Queiroz.</div>
+
+                </div>
+
+                <div class="ParteBaixo">
+
+                    <span id="Frases"><b>Nome:</b> Douglas Silva de Queiroz.</span>
+                    <span id="Frases"><b>Idade:</b> 18 anos.</span>
+                    <span id="Frases"><b>Data de Nascimento:</b> 02/05/2005</span>
+                    <span id="Frases"><b>Faculdade:</b>São Paulo Tech School.</span>
+
+                </div>
+
+            </div>
+
+            <div class="Bio">
+
+                <div class="TituloSobre"><span id="texto">Sobre Mim</span></div>
+
+                <div class="TextoHistoria">
+                    <div class="Margem">
+
+                        <div id="textao">
+                            
+                            Meu nome é Douglas Silva de Queiroz. Nasci em 02/05/2005 e tenho 18 anos de idade. Amo jogos eletrônicos e meu jogo preferido é o CSGO (Counter-Strike: Global Offensive). <br><br>
+
+                            Além disso, estou cursando ADS (Análise e Desenvolvimento de Sistemas) na São Paulo Tech School. Sou fascinado por tecnologia e estou constantemente buscando aprender novas habilidades e aprimorar meu conhecimento na área da tecnologia.
+                            
+                            
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+        </div><br><br>
+
+
+        <div class="TextoHistoriaCSGO">
+
+            <div class="TituloSobre"><span id="texto">Por que escolhi o CSGO ?</span></div>
+            <div class="MargemCSGO">
+
+                
+
+                <div id="textao">
+                    
+                    Minha trajetória até o CSGO começou com o meu primeiro jogo de FPS, chamado CROSSFIRE. Naquela época, os gráficos desse jogo eram um pouco rudimentares, mas como eu era ainda jovem, isso não importava muito para mim. No entanto, tudo mudou quando um grupo de amigos que conheci no Discord me convidou para jogar Counter-Strike: Global Offensive (CSGO). Foi nesse momento que me apaixonei perdidamente pelo CSGO, pois era como se fosse uma versão aprimorada do CROSSFIRE, com gráficos incríveis que me encantaram (especialmente aos meus olhos de uma criança de 13 anos). <br> <br>
+
+Desde então, cresci jogando CSGO e até hoje essa paixão não diminuiu. Tenho um carinho imenso por esse jogo e todos os momentos incríveis que vivenciei nele. A escolha do CSGO como tema para o meu site foi uma decisão natural, pois representa uma parte significativa da minha vida e das minhas experiências no mundo dos jogos. <br> <br>
+
+O CSGO é um jogo que me cativou não apenas pelos seus gráficos impressionantes, mas também pela sua jogabilidade estratégica, competições acirradas e comunidade ativa. Ao longo dos anos, mergulhei cada vez mais nesse universo, explorando mapas, aprendendo táticas, aprimorando minhas habilidades e formando laços com outros jogadores apaixonados pelo CSGO. <br> <br>
+
+Escolher o CSGO como tema para o meu site é uma maneira de compartilhar minha jornada pessoal, fornecer informações úteis sobre o jogo, compartilhar dicas, estratégias e notícias relevantes para a comunidade. Além disso, também me permite expressar minha criatividade por meio do design do site, destacando elementos visuais marcantes do jogo e criando uma plataforma interativa para outros entusiastas. <br> <br>
+
+O CSGO é mais do que um jogo para mim, é uma parte integrante da minha vida e escolher esse tema para o meu site é uma forma de homenagear e celebrar essa paixão duradoura.
+                    
+                    
+
+
+                </div>
+            </div>
+        </div>
+
+       </div>
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+        <div class="containerFooter">
+            <span id="DireitosReservados">TODOS OS DIREITOS RESERVADOS PELA COUNTER NET</span>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+<script src="js/funcoes.js"></script>

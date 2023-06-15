@@ -25,8 +25,3 @@ function logout(){
 function home() {
     window.location.href = "../home.html"
 }
-
-
-function dust(){
-    window.location.href = "mapas.html"
-}

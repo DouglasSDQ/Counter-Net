@@ -1,3 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    overflow-x: hidden;
+
+}
+
+
+
 .header {
     display: flex;
     width: 100%;
@@ -42,7 +52,11 @@
 
 }
 
-
+#sobrehover a {
+    font-weight: bold;
+    font-size: 17px;
+    color: #C36B1A;
+}
 
 /* EFEITO NA NAVBAR */
 #homehover:hover a {
@@ -86,18 +100,11 @@
 }
 
 /* CONTEÚDO */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial;
-    overflow-x: hidden;
-
-}
 
 .container {
     display: flex;
     width: 100%;
-    height: 150vh;
+    height: 120vh;
     padding-top: 2%;
     padding-bottom: 2%;
     background-color: #242424d0;
@@ -110,13 +117,13 @@ body {
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
-    background-color: #B9B9B9;
     width: 78%;
-    height: 30%;
+    height: 300px;
     border-radius: 10px;
     backdrop-filter: blur(10px);
     padding: 1%;
     align-items: center;
+    background-color: #B9B9B9;
 
 }
 
@@ -124,7 +131,6 @@ body {
     width: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: #B9B9B9;
     cursor: pointer;
     height: 7px;
 }
@@ -154,88 +160,75 @@ body {
 #DivDust {
     min-width: 20%;
     height: 100%;
-    border: 1px solid white;
     cursor: pointer;
+    background-image: url(../assets/assetsInicial/Scrollbar-horizontal/dust2.png);
+    background-size: cover;
 }
 
 #DivMirage {
     min-width: 20%;
     height: 100%;
-    border: 1px solid white;
     cursor: pointer;
+    background-image: url(../assets/assetsInicial/Scrollbar-horizontal/Mirage.png);
+    background-size: cover;
 }
 
 #DivInferno {
     min-width: 20%;
     height: 100%;
-    border: 1px solid white;
     cursor: pointer;
+    background-image: url(../assets/assetsInicial/Scrollbar-horizontal/Inferno\ 2.png);
+    background-size: cover;
 }
 
 #DivNuke {
     min-width: 20%;
     height: 100%;
-    border: 1px solid white;
     cursor: pointer;
+    background-image: url(../assets/assetsInicial/Scrollbar-horizontal/Nuke.png);
+    background-size: cover;
 }
 
 #DivOverpass {
     min-width: 20%;
     height: 100%;
-    border: 1px solid white;
     cursor: pointer;
+    background-image: url(../assets/assetsInicial/Scrollbar-horizontal/Overpass.png);
+    background-size: cover;
 
 }
 
 #DivTrain {
     min-width: 20%;
     height: 100%;
-    border: 1px solid white;
     cursor: pointer;
+    background-image: url(../assets/assetsInicial/Scrollbar-horizontal/train.png);
+    background-size: cover;
 }
 
 #DivCache {
     min-width: 20%;
     height: 100%;
-    border: 1px solid white;
     cursor: pointer;
+    background-image: url(../assets/assetsInicial/Scrollbar-horizontal/Cache.png);
+    background-size: cover;
 }
 
 #DivCobble {
 
     min-width: 20%;
     height: 100%;
-    border: 1px solid white;
     cursor: pointer;
-}
-
-#DivAncient {
-    min-width: 20%;
-    height: 100%;
-    border: 1px solid white;
-    cursor: pointer;
-}
-
-#DivOffice {
-    min-width: 20%;
-    height: 100%;
-    border: 1px solid white;
-    cursor: pointer;
-}
-
-#DivAnubis {
-    min-width: 20%;
-    height: 100%;
-    border: 1px solid white;
-    cursor: pointer;
+    background-image: url(../assets/assetsInicial/Scrollbar-horizontal/Cobblestone.png);
+    background-size: cover;
 }
 
 #DivVertigo {
     min-width: 20%;
     height: 100%;
-    border: 1px solid white;
     cursor: pointer;
-
+    background-image: url(../assets/assetsInicial/Scrollbar-horizontal/vertigo.png);
+    background-size: cover;
 }
 
 .scroll {
@@ -248,24 +241,266 @@ body {
     display: flex;
     width: 80%;
     height: 100%;
-    background-color: red;
+    background-color: #B9B9B9;
     border-radius: 10px;
 }
 
+
 .parteEsquerda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 50%;
     height: 100%;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    background-color: yellow;
+}
+
+.containerInfo{
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    height: 98%;
+}
+
+#NomeMapa{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#InformacoesMapas{
+    display: flex;
+    text-align: justify;
+    width: 100%;
+    height: 90%;
+
+}
+
+#radarDust{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/Minimapas/dust2_radar.jpg);
+    background-size: cover;
 }
 
 .parteDireita{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 50%;
     height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 
+.MostrarInfoMapas{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    background-color: #B9B9B9;
+    border-radius: 10px;
+}
+
+
+.parteEsquerda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.containerInfo{
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    height: 98%;
+}
+
+#NomeMapa{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#InformacoesMapas{
+    display: flex;
+    text-align: justify;
+    width: 100%;
+    height: 90%;
+
+}
+
+
+#LinkVotacao{
+    width: 100%;
+    height: 10%;
+    font-weight: bold;
+}
+
+
+
+#LinkVotacao button{
+    width: 20%;
+    height: 40%;
+    font-weight: bold;
+    border: 0;
+    background-color: #C36B1A;
+    border-radius: 10px ;
+    cursor: pointer;
+}
+
+#LinkVotacao button:hover{
+    width: 20%;
+    height: 40%;
+    font-weight: bold;
+    border: 0;
+    background-color: #b98552;
+    border-radius: 10px ;
+    cursor: pointer;
+}
+
+
+
+
+.parteDireita{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+/* DIV DUST */
+
+
+.parteEsquerdaDust{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.containerInfoDust{
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    height: 98%;
+}
+
+#NomeMapaDust{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#InformacoesMapasDust{
+    display: flex;
+    text-align: justify;
+    width: 100%;
+    height: 90%;
+
+}
+
+#radarDust{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/Minimapas/dust2_radar.webp);
+    background-size: cover;
+}
+
+#radarMirage{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/Minimapas/mirage_radar.webp);
+    background-size: cover;
+}
+
+#radarInferno{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/Minimapas/De_inferno_radar.webp);
+    background-size: cover;
+}
+
+#radarNuke{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/Minimapas/De_nuke_radar.webp);
+    background-size: cover;
+}
+
+#radarOverpass{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/Minimapas/De_overpass_radar.webp);
+    background-size: cover;
+}
+
+#radarTrain{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/Minimapas/download.webp);
+    background-size: cover;
+}
+
+#radarCache{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/Minimapas/De_cache_radar.webp);
+    background-size: cover;
+}
+
+#radarCobble{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/Minimapas/De_cbble_radar.webp);
+    background-size: cover;
+}
+
+#radarVertigo{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/Minimapas/De_vertigo_radar.webp);
+    background-size: cover;
+}
 
 /* FOOTER */
 .footer {

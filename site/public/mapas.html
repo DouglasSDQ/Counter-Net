@@ -16,16 +16,14 @@
 
   <!-- HEADER -->
   <div class="header">
-    <img class="Logo" src="./assets/ImagensGerais/Logo CSGO.png" style="width: 7%; height: 60%; cursor: pointer;" alt="" onclick="home()">
+    <img class="Logo" src="./assets/ImagensGerais/logoCSGO.png" style="width: 7%; height: 60%; cursor: pointer;" alt=""
+      onclick="home()">
     <div class="navbar">
       <div id="textonavbar">
         <!-- <img class="Logo" src="../ImagensGerais/Logo CSGO.png"  alt=""> -->
-        <li id="homehover"><a href="">HOME</a></li>
-        <li id="sobrehover"><a href="sobre.html">SOBRE</a></li>
-        <li id="ajudahover"><a href="">AJUDA</a></li>
-        <li id="falehover">
-          <a href="fale-conosco.html">FALE CONOSCO</a>
-        </li>
+        <li id="homehover"><a href="home.html">HOME</a></li>
+        <li id="sobrehover"><a href="mapas.html">MAPAS</a></li>
+        <li id="ajudahover"><a href="sobremim.html">SOBRE MIM</a></li>
         <li>|</li>
         <li id="iconmenuperfil" class="material-symbols-outlined" onclick="clickPerfil()">
           menu
@@ -49,86 +47,382 @@
   <!-- LISTA MAPAS -->
 
   <div class="container">
-    
-      <div class="containerConteudo">
 
-        <div id="DivDust" class="scroll" onclick="dust()">
-          <h2>DUST II</h2>
-        </div><br>
+    <div class="containerConteudo">
 
-        <div id="DivMirage" class="scroll">
-          <h2>MIRAGE</h2>
-        </div><br>
+      <div id="DivDust" class="scroll" onclick="MostrarInfo('Dust2')"></div><br>
 
-        <div id="DivInferno" class="scroll">
-          <h2>INFERNO</h2>
-        </div><br>
+      <div id="DivMirage" class="scroll" onclick="MostrarInfo('Mirage')"></div><br>
 
-        <div id="DivNuke" class="scroll">
-          <h2>NUKE</h2>
-        </div><br>
+      <div id="DivInferno" class="scroll" onclick="MostrarInfo('Inferno')"></div><br>
 
-        <div id="DivOverpass" class="scroll">
-          <h2>OVERPASS</h2>
-        </div><br>
+      <div id="DivNuke" class="scroll" onclick="MostrarInfo('Nuke')"></div><br>
 
-        <div id="DivTrain" class="scroll">
-          <h2>TRAIN</h2>
-        </div><br>
+      <div id="DivOverpass" class="scroll" onclick="MostrarInfo('Overpass')"> </div><br>
 
-        <div id="DivCache" class="scroll">
-          <h2>CACHE</h2>
-        </div><br>
+      <div id="DivTrain" class="scroll" onclick="MostrarInfo('Train')"></div><br>
 
-        <div id="DivCobble" class="scroll">
-          <h2>COBBLESTONE</h2>
-        </div><br>
+      <div id="DivCache" class="scroll" onclick="MostrarInfo('Cache')"></div><br>
 
-        <div id="DivAncient" class="scroll">
-          <h2>ANCIENT</h2>
-        </div><br>
+      <div id="DivCobble" class="scroll" onclick="MostrarInfo('Cobble')"></div><br>
 
-        <div id="DivOffice" class="scroll">
-          <h2>OFFICE</h2>
-        </div><br>
+      <div id="DivVertigo" class="scroll" onclick="MostrarInfo('Vertigo')"></div><br>
 
-        <div id="DivAnubis" class="scroll">
-          <h2>ANUBIS</h2>
-        </div><br>
+    </div><br>
 
-        <div id="DivVertigo" class="scroll">
-          <h2>VERTIGO</h2>
-        </div><br>
 
-      </div><br>
-    
     <div class="MostrarInfoMapas">
-      <div class="parteEsquerda">
 
-        <div class="BlocaoMarromInfos" id="blocaoMarromInfo">
-          <div class="containerBlocaoInfos">
-          <span id="categoriaExibida">Financeiro</span>
-          <span id="fraseExibida"></span>
+
+      <div class="conteudoInterno">
+
+        <div class="parteEsquerda">
+
+          <div class="containerInfo">
+            <span id="NomeMapa"></span>
+
+            <span id="InformacoesMapas">
+            </span>
+
           </div>
         </div>
 
-      </div>
-      <div class="parteDireita">
 
-        <div class="BlocaoMarromInfos" id="blocaoMarromInfo">
-          <div class="containerBlocaoInfos">
-          <span id="categoriaExibida">Financeiro</span>
-          <span id="fraseExibida"></span>
+
+        <div class="parteDireita">
+
+          <div class="containerInfo">
+            <div id="radarDust"></div>
           </div>
+
         </div>
 
       </div>
+
+      <div class="conteudoInterno" id="DustConteudo" style="display: none;">
+
+        <div class="parteEsquerda">
+  
+          <div class="containerInfo">
+            <span id="NomeMapa">Dust II</span>
+  
+            <span id="InformacoesMapas">Dust2 apresenta um equilíbrio entre áreas abertas e corredores estreitos, permitindo diferentes estilos de jogo. As equipes podem optar por uma estratégia agressiva, usando fumaças e flashes para avançar rapidamente em uma área específica, ou podem adotar uma abordagem mais lenta e tática, controlando o mapa por meio de posicionamento e comunicação eficiente. <br> <br>
+
+              Ao longo dos anos, Dust2 se tornou um mapa bastante competitivo e popular em torneios profissionais de CS:GO. Sua jogabilidade equilibrada, layout reconhecível e estratégias variadas o tornaram um dos favoritos tanto para jogadores casuais quanto para profissionais. <br> <br>
+
+              O mapa é dividido em três áreas principais: o Long A, o Mid e o B Tunnels. O Long A é uma área aberta com um corredor longo e estreito, onde é possível ter tiroteios à longa distância. O Mid é uma área central que conecta o Long A e o B Tunnels, e possui várias opções de rotação e visibilidade para ambas as equipes. Os B Tunnels são corredores estreitos e escuros que levam ao Bomb Site B, proporcionando uma abordagem mais tática.
+            </span>
+
+            <div id="LinkVotacao">Vote no seu mapa favorito: <button onclick="votacao()">VOTE AQUI !!</button></div>
+
+          </div>
+        </div>
+  
+  
+  
+        <div class="parteDireita">
+  
+          <div class="containerInfo">
+            <div id="radarDust"></div>
+          </div>
+  
+        </div>
+
+
+
+        
+  
+      </div>
+
+      <div class="conteudoInterno" id="MirageConteudo" style="display: none;">
+
+        <div class="parteEsquerda">
+  
+          <div class="containerInfo">
+            <span id="NomeMapa">Mirage</span>
+  
+            <span id="InformacoesMapas">A configuração de Mirage é baseada em uma cidade do Oriente Médio e apresenta uma mistura de áreas internas e externas. O mapa é dividido em duas equipes: Terroristas (T) e Contra-Terroristas (CT), cada uma com seus objetivos específicos. <br> <br>
+
+              Mirage possui várias áreas e rotas importantes. O "Mid" é um corredor central que conecta as duas áreas de bombeamento e é uma posição estratégica crucial para controlar o mapa. Ele oferece várias linhas de visão e permite uma rápida rotação entre os bombsites.<br> <br>
+              
+              Além do Mid, existem várias outras áreas-chave no mapa. O "Palace" é uma entrada próxima ao Bomb Site A que oferece uma visão direta do local e é frequentemente usada pelos Terroristas para um ataque rápido. O "Apartments" é uma área residencial próxima ao Bomb Site B, oferecendo uma entrada alternativa para os Terroristas.<br> <br>
+              
+              Mirage também apresenta várias passagens estreitas, como o "Underpass" e o "Connector", que permitem flanquear os inimigos e criar jogadas táticas surpreendentes. A comunicação e o trabalho em equipe são cruciais para o sucesso nesse mapa, pois os jogadores precisam coordenar suas ações e posições para controlar as áreas-chave e executar estratégias eficazes.
+
+              
+            </span>
+            <div id="LinkVotacao">Vote no seu mapa favorito: <button onclick="votacao()">VOTE AQUI !!</button></div>
+          </div>
+        </div>
+  
+  
+  
+        <div class="parteDireita">
+  
+          <div class="containerInfo">
+            <div id="radarMirage"></div>
+          </div>
+  
+        </div>
+  
+      </div>
+
+      <div class="conteudoInterno" id="InfernoConteudo" style="display: none;">
+
+        <div class="parteEsquerda">
+  
+          <div class="containerInfo">
+            <span id="NomeMapa">Inferno</span>
+  
+            <span id="InformacoesMapas">O cenário de Inferno é baseado em uma vila mediterrânea e é um dos mapas mais temáticos do jogo. Assim como outros mapas do CS:GO, Inferno coloca as equipes de Terroristas (T) e Contra-Terroristas (CT) em conflito, cada uma com seus próprios objetivos. <br> <br>
+              
+              Inferno apresenta uma série de características distintas que o tornam um mapa estratégico e tático. Há várias áreas e rotas-chave que desempenham um papel importante na jogabilidade.<br> <br>
+
+              Inferno apresenta uma variedade de lugares distintos que desempenham papéis cruciais na jogabilidade do mapa. O "Bomb Site A" e o "Bomb Site B" áreas onde se planta a C4. O corredor central, conhecido como "Mid", conecta ambos os locais de bombeamento e é um ponto de controle crucial para as equipes. Esses lugares em Inferno oferecem uma variedade de táticas e estratégias, tornando cada rodada única e desafiadora. <br> <br>
+              
+              A jogabilidade em Inferno é conhecida por sua intensidade e competitividade. As rodadas são frequentemente disputadas em curtas distâncias, o que exige habilidades de combate próximas e tiroteios precisos. A comunicação e o trabalho em equipe são fundamentais para o sucesso neste mapa, permitindo que os jogadores coordenem suas ações e tomem decisões estratégicas em tempo real.
+            </span>
+            <div id="LinkVotacao">Vote no seu mapa favorito: <button onclick="votacao()">VOTE AQUI !!</button></div>
+          </div>
+        </div>
+  
+  
+  
+        <div class="parteDireita">
+  
+          <div class="containerInfo">
+            <div id="radarInferno"></div>
+          </div>
+  
+        </div>
+  
+      </div>
+
+      <div class="conteudoInterno" id="NukeConteudo" style="display: none;">
+
+        <div class="parteEsquerda">
+  
+          <div class="containerInfo">
+            <span id="NomeMapa">Nuke</span>
+  
+            <span id="InformacoesMapas">Nuke é um mapa clássico e icônico do Counter-Strike: Global Offensive (CS:GO) que tem sido parte da série de jogos Counter-Strike há muitos anos. É um mapa que se destaca por sua temática industrial e sua jogabilidade única. <br> <br>
+              
+              O mapa Nuke apresenta uma arquitetura vertical única, com vários níveis e escadas que levam a diferentes áreas. Há uma área de spawn para cada equipe, conectadas por um corredor central chamado de "Ramp Room". Essa área leva ao "Bombsite B" no nível inferior e também oferece acesso a outras partes do mapa, como a "Heaven" e a "Control Room". <br> <br>
+              
+              Além do "Ramp Room", Nuke possui outros locais importantes, como o "Secret" (uma área de acesso restrito) e o "Upper Site" (parte superior da usina). Essas áreas oferecem diferentes pontos de entrada e opções estratégicas para ambas as equipes, permitindo que planejem emboscadas, rotações rápidas e ataques coordenados. <br> <br>
+              
+              Nuke é conhecido por sua jogabilidade intensa e desafiadora, onde o controle de áreas-chave e uma boa comunicação são cruciais para o sucesso. A verticalidade do mapa e a necessidade de entender e controlar diferentes níveis tornam Nuke um mapa estratégico e tático, exigindo que os jogadores tomem decisões rápidas e precisas.
+            
+            </span>
+            <div id="LinkVotacao">Vote no seu mapa favorito: <button onclick="votacao()">VOTE AQUI !!</button></div>
+          </div>
+        </div>
+  
+  
+  
+        <div class="parteDireita">
+  
+          <div class="containerInfo">
+            <div id="radarNuke"></div>
+          </div>
+  
+        </div>
+  
+      </div>
+
+      <div class="conteudoInterno" id="OverpassConteudo" style="display: none;">
+
+        <div class="parteEsquerda">
+  
+          <div class="containerInfo">
+            <span id="NomeMapa">Overpass</span>
+  
+            <span id="InformacoesMapas">
+              Overpass é um mapa do Counter-Strike: Global Offensive (CS:GO) que foi introduzido na atualização de 2013 e se tornou rapidamente um dos mapas mais populares do jogo. Ele é conhecido por seu layout único e suas características distintas. <br> <br>
+
+A configuração de Overpass ocorre em um cenário urbano, apresentando uma mistura de áreas internas e externas. O mapa é dividido entre as equipes de Terroristas (T) e Contra-Terroristas (CT), cada uma com seus próprios objetivos. <br> <br>
+
+Overpass apresenta várias áreas e rotas-chave que desempenham um papel crucial na jogabilidade do mapa. A área central, conhecida como "Bathrooms", é um corredor amplo e aberto que conecta os dois sites de bomba. Essa área é frequentemente um local de confronto intenso e emboscadas. <br> <br>
+
+A jogabilidade em Overpass é conhecida por sua variedade de estratégias e opções táticas. Os jogadores podem optar por abordagens agressivas, usando flashes e granadas de fumaça para conquistar áreas-chave rapidamente, ou podem adotar uma abordagem mais tática, controlando o mapa por meio de controle de áreas e posicionamento defensivo. Overpass é considerado um mapa desafiador e tático, exigindo comunicação eficiente e trabalho em equipe para alcançar o sucesso. 
+            </span>
+            <div id="LinkVotacao">Vote no seu mapa favorito: <button onclick="votacao()">VOTE AQUI !!</button></div>
+          </div>
+        </div>
+  
+  
+  
+        <div class="parteDireita">
+  
+          <div class="containerInfo">
+            <div id="radarOverpass"></div>
+          </div>
+  
+        </div>
+  
+      </div>
+
+      <div class="conteudoInterno" id="TrainConteudo" style="display: none;">
+
+        <div class="parteEsquerda">
+  
+          <div class="containerInfo">
+            <span id="NomeMapa">Train</span>
+  
+            <span id="InformacoesMapas">Train é um mapa clássico do Counter-Strike: Global Offensive (CS:GO) que tem sido parte da série de jogos Counter-Strike há muitos anos. Ele foi redesenhado e reintroduzido no CS:GO, mantendo sua atmosfera ferroviária distintiva e jogabilidade desafiadora. <br> <br>
+
+              Train apresenta um layout simétrico com uma série de áreas e rotas-chave. Há o "Bombsite A", localizado na parte externa da estação de trem, e o "Bombsite B", situado dentro do edifício da estação. Ambos os sites possuem características únicas, como obstáculos, esconderijos e pontos de vantagem estratégica. <br> <br>
+              
+              O mapa Train é conhecido por seu estilo de jogo tático e requer um bom trabalho em equipe e comunicação para o sucesso. Existem várias áreas-chave, como o "Upper Halls" e o "Lower Halls", que oferecem rotas alternativas e opções de flanqueamento para ambas as equipes. <br> <br>
+              
+              Além disso, Train possui um corredor central chamado de "Connector", que permite conexões rápidas entre os sites de bombeamento. A "Ivy" é outra área importante, fornecendo acesso ao Bomb Site A e sendo um ponto estratégico para emboscadas e controle do mapa.
+            </span>
+            <div id="LinkVotacao">Vote no seu mapa favorito: <button onclick="votacao()">VOTE AQUI !!</button></div>
+          </div>
+        </div>
+  
+  
+  
+        <div class="parteDireita">
+  
+          <div class="containerInfo">
+            <div id="radarTrain"></div>
+          </div>
+  
+        </div>
+  
+      </div>
+
+      <div class="conteudoInterno" id="CacheConteudo" style="display: none;">
+
+        <div class="parteEsquerda">
+  
+          <div class="containerInfo">
+            <span id="NomeMapa">DUST II</span>
+  
+            <span id="InformacoesMapas">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, quas a. Sapiente
+              animi atque amet ex exercitationem quos veritatis architecto sed alias distinctio quas asperiores, ea
+              minima? Cumque, incidunt dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere
+              earum reprehenderit explicabo enim obcaecati blanditiis nulla maiores expedita veniam ipsum a rerum nesciunt
+              sunt, officiis tempore sapiente. Provident, rerum? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Illo eos reiciendis nemo possimus vitae officiis ullam excepturi, provident asperiores ut laboriosam ex
+              dolorum sapiente saepe id assumenda et minima pariatur? <br><br>
+  
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, quas a. Sapiente
+              animi atque amet ex exercitationem quos veritatis architecto sed alias distinctio quas asperiores, ea
+              minima? Cumque, incidunt dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere
+              earum reprehenderit explicabo enim obcaecati blanditiis nulla maiores expedita veniam ipsum a rerum nesciunt
+              sunt, officiis tempore sapiente. Provident, rerum? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Illo eos reiciendis nemo possimus vitae officiis ullam excepturi, provident asperiores ut laboriosam ex
+              dolorum sapiente saepe id assumenda et minima pariatur?
+            </span>
+            <div id="LinkVotacao">Vote no seu mapa favorito: <button onclick="votacao()">VOTE AQUI !!</button></div>
+          </div>
+        </div>
+  
+  
+  
+        <div class="parteDireita">
+  
+          <div class="containerInfo">
+            <div id="radarTrain"></div>
+          </div>
+  
+        </div>
+  
+      </div>
+
+      <div class="conteudoInterno" id="CobbleConteudo" style="display: none;">
+
+        <div class="parteEsquerda">
+  
+          <div class="containerInfo">
+            <span id="NomeMapa">Cobblestone</span>
+  
+            <span id="InformacoesMapas">
+              Cobblestone, também conhecido como Cobble, é um mapa do jogo Counter-Strike: Global Offensive (CS:GO) que foi introduzido no CS 1.6 e redesenhado para o CS:GO. O mapa se passa em um castelo medieval e é conhecido por sua atmosfera única e jogabilidade desafiadora. <br> <br>
+
+Cobblestone apresenta uma variedade de áreas-chave e rotas estratégicas. Há o "Long A", uma passagem longa e estreita que leva ao Bombsite A, e o "Long B", uma rota semelhante que conduz ao Bombsite B. Ambas as áreas possuem pontos de cobertura e oferecem vantagens estratégicas para as equipes. <br> <br>
+
+A jogabilidade em Cobblestone é conhecida por ser desafiadora e requer comunicação eficiente e bom trabalho em equipe. O mapa oferece uma mistura de áreas abertas e corredores estreitos, exigindo tiros precisos e posicionamento estratégico dos jogadores. <br> <br>
+
+Cobblestone foi um mapa popular em competições de CS:GO ao longo dos anos, embora tenha passado por algumas alterações e tenha sido removido do mapa competitivo em 2018. No entanto, permanece como um mapa apreciado por jogadores casuais e é ocasionalmente usado em torneios menores ou em modos de jogo não competitivos.
+
+
+
+
+
+            </span>
+            <div id="LinkVotacao">Vote no seu mapa favorito: <button onclick="votacao()">VOTE AQUI !!</button></div>
+          </div>
+        </div>
+  
+  
+  
+        <div class="parteDireita">
+  
+          <div class="containerInfo">
+            <div id="radarCobble"></div>
+          </div>
+  
+        </div>
+  
+      </div>
+
+      <div class="conteudoInterno" id="VertigoConteudo" style="display: none;">
+
+        <div class="parteEsquerda">
+  
+          <div class="containerInfo">
+            <span id="NomeMapa">DUST II</span>
+  
+            <span id="InformacoesMapas">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, quas a. Sapiente
+              animi atque amet ex exercitationem quos veritatis architecto sed alias distinctio quas asperiores, ea
+              minima? Cumque, incidunt dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere
+              earum reprehenderit explicabo enim obcaecati blanditiis nulla maiores expedita veniam ipsum a rerum nesciunt
+              sunt, officiis tempore sapiente. Provident, rerum? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Illo eos reiciendis nemo possimus vitae officiis ullam excepturi, provident asperiores ut laboriosam ex
+              dolorum sapiente saepe id assumenda et minima pariatur? <br><br>
+  
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, quas a. Sapiente
+              animi atque amet ex exercitationem quos veritatis architecto sed alias distinctio quas asperiores, ea
+              minima? Cumque, incidunt dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere
+              earum reprehenderit explicabo enim obcaecati blanditiis nulla maiores expedita veniam ipsum a rerum nesciunt
+              sunt, officiis tempore sapiente. Provident, rerum? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Illo eos reiciendis nemo possimus vitae officiis ullam excepturi, provident asperiores ut laboriosam ex
+              dolorum sapiente saepe id assumenda et minima pariatur?
+            </span>
+            <div id="LinkVotacao">Vote no seu mapa favorito: <button onclick="votacao()">VOTE AQUI !!</button></div>
+          </div>
+        </div>
+  
+  
+  
+        <div class="parteDireita">
+  
+          <div class="containerInfo">
+            <div id="radarVertigo"></div>
+          </div>
+  
+        </div>
+  
+      </div>
+      
+      
     </div>
+
+
+    
+
 
   </div>
 
-  
-<!-- FOOTER  -->
+
+
+  </div>
+
+
+  <!-- FOOTER  -->
   <div class="footer">
     <div class="containerFooter">
       <span id="DireitosReservados">TODOS OS DIREITOS RESERVADOS PELA COUNTER NET</span>
@@ -141,3 +435,11 @@
 </html>
 <script src="js/funcoes.js"></script>
 <script src="js/mapas.js"></script>
+<script>
+
+
+  function votacao(){
+    window.location.href = `votacao.html`
+  }
+
+</script>
