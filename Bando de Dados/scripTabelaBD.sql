@@ -17,14 +17,14 @@ nomeMapa varchar(45)
 
 
 create table voto (
+idVotacao int primary key auto_increment,
 fkUsuario int,
 constraint fkUsuaio foreign key (fkUsuario) references usuario(idUsuario),
-fkMapas int,
-constraint fkMapas foreign	key (fkMapas) references mapa(idMapa)
+mapa varchar(45)
 );
 
 insert into mapa values 
-(null, 'Dust II'),
+(null, 'DustII'),
 (null, 'Mirage'),
 (null, 'Inferno'),
 (null, 'Nuke'),
@@ -35,8 +35,32 @@ insert into mapa values
 (null,'Vertigo');
 
 
-select * from usuario;
+update mapa set nomeMapa = 'DustII' where idMapa = 1;
 
+
+
+insert into voto values 
+(2, 1, 'Mirage' ),
+(3, 1, 'Train' ),
+(4, 1, 'Overpass' );
+
+
+
+
+select
+(select count(*) from voto where mapa = 'Mirage') as 'Mirage',
+(select count(*) from voto where mapa = 'Dust II') as 'Dust II',
+(select count(*) from voto where mapa = 'Inferno') as Inferno,
+(select count(*) from voto where mapa = 'Train') as Train,
+(select count(*) from voto where mapa = 'Cobblestone') as Cobblestone,
+(select count(*) from voto where mapa = 'Overpass') as Overpass,
+(select count(*) from voto where mapa = 'Nuke') as Nuke,
+(select count(*) from voto where mapa = 'Vertigo') as Vertigo,
+(select count(*) from voto where mapa = 'Cache') as 'Cache';
+
+select * from usuario;
+select * from voto;
+select * from mapa;
 
 
 
